@@ -77,11 +77,11 @@ if menu_num == 1:   # 햄버거 세트
     while True:
         choice_num2 = int(input('>> 번호:'))
         if choice_num2 >= 1 and choice_num2 <= 2:
-                menu_save['side'] = side_name[choice_num2]
-                price_save['side'] = side_price[choice_num2]
-                break
-             else:
-                 print('# MSG: 1~2의 번호만 입력해주세요')
+            menu_save['side'] = side_name[choice_num2]
+            price_save['side'] = side_price[choice_num2]
+            break
+        else:
+            print('# MSG: 1~2의 번호만 입력해주세요')
 
     print('=============================')
     print('-= DRINK MENU')
@@ -102,21 +102,21 @@ if menu_num == 1:   # 햄버거 세트
 
 elif menu_num == 2:  # 햄버거 단품
     print('=============================')
-        print('-= burger menu')
-        print('-=1. 새우버거: 3800원')
-        print('-=2. 불고기버거:3500원')
-        print('-=3. 치즈버거:3500원')
-        print('==============================')
-        print('==원하시는 메뉴의 번호를 입력해주세요')
+    print('-= burger menu')
+    print('-=1. 새우버거: 3800원')
+    print('-=2. 불고기버거:3500원')
+    print('-=3. 치즈버거:3500원')
+    print('==============================')
+    print('==원하시는 메뉴의 번호를 입력해주세요')
 
-        while True:
-            choice_num = int(input('>> 번호: '))
-            if choice_num >= 1 and choice_num <= 3:
-                menu_save['burger'] = burger_name[choice_num]
-                price_save['burger'] = burger_price[choice_num]
-                break
-            else:
-                print('# MSG: 1~3의 번호만 입력해주세요 :)')
+    while True:
+        choice_num = int(input('>> 번호: '))
+        if choice_num >= 1 and choice_num <= 3:
+            menu_save['burger'] = burger_name[choice_num]
+            price_save['burger'] = burger_price[choice_num]
+            break
+        else:
+            print('# MSG: 1~3의 번호만 입력해주세요 :)')
 
 elif menu_num == 3:  # 사이드 매뉴
     print('=====================================')
@@ -175,7 +175,7 @@ for price in price_save.values():
 print('==================================')
 print('== 고객님이 주문하신 메뉴는')
 for i, menu_num in enumerate(menu_save.values()):
-    print('-= {}.{}'.format(i+1, menu))
+    print('-= {}.{}'.format(i+1, menu_save))
 print('-=으로 총 주문금액은 {}원 입니다.'.format(total_price))
 print('===================================')
 print('-=이용해주셔서 감사합니다. 또 방문해주세요')
