@@ -25,7 +25,7 @@ for page in range(1, page+1):
 
     for one in review_list:
         count += 1
-        print('## USER -> {} #######################################################'.format(count + 1))
+        print('## USER -> {} #######################################################'.format(count))
 
         # 평점정보 수집
         score = one.select('div.star_score > em')[0].get_text()
